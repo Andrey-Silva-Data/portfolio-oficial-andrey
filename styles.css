@@ -442,3 +442,70 @@
         font-size: 11.5px;
     }
 }
+
+/* =========================================================
+   DESTAQUE NA SEÇÃO 04 — STACK & COMPETÊNCIAS (.skill-group)
+   ========================================================= */
+
+.skills-section .skills-layout {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.skills-section .skill-group {
+    padding: 32px 26px;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-section .skill-icon {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.skills-section .skill-group h3 {
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 20px 0 18px;
+}
+
+.skills-section .skill-pills {
+    gap: 10px;
+}
+
+.skills-section .skill-pills span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #d6e5f4;
+    padding: 8px 13px;
+    line-height: 1.3;
+}
+
+/* Em telas médias (tablets/notebooks menores), 2 colunas para não apertar os textos */
+@media (max-width: 1050px) {
+    .skills-section .skills-layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Em celulares */
+@media (max-width: 620px) {
+    .skills-section .skills-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-section .skill-group {
+        padding: 24px 20px;
+        min-height: auto;
+    }
+
+    .skills-section .skill-group h3 {
+        font-size: 20px;
+    }
+
+    .skills-section .skill-pills span {
+        font-size: 13px;
+        padding: 7px 11px;
+    }
+}
