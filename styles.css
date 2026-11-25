@@ -5,38 +5,53 @@
 
 /* AWS CLOUD PROJECTS - INTERACTIVE CARDS */
 
+/* AWS CLOUD PROJECTS - INTERACTIVE CARDS */
+
 .cloud-grid .cloud-item {
-    display: flex;
-    text-decoration: none;
+    display: grid;
+    grid-template-columns: 40px 1fr 20px;
+    gap: 15px;
+    align-items: start;
+
     color: inherit;
+    text-decoration: none;
     cursor: pointer;
-    transition: transform 0.3s ease,
-                border-color 0.3s ease,
-                background 0.3s ease;
+
+    transition: background .25s ease,
+                border-color .25s ease,
+                transform .25s ease,
+                box-shadow .25s ease;
 }
 
-/* Hover: card inteiro interativo */
 .cloud-grid .cloud-item:hover {
-    transform: translateY(-4px);
-    border-color: rgba(0, 220, 255, 0.65);
-    background: rgba(0, 220, 255, 0.04);
+    background: rgba(53, 213, 232, 0.08);
+    border-color: var(--cyan);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Seta */
+.cloud-grid .cloud-item h3 {
+    transition: color .25s ease;
+}
+
+.cloud-grid .cloud-item:hover h3 {
+    color: var(--cyan);
+}
+
 .cloud-grid .cloud-arrow {
+    color: var(--cyan);
+    opacity: 1;
     display: inline-block;
-    transition: transform 0.3s ease,
-                color 0.3s ease;
+    transition: transform .25s ease,
+                color .25s ease;
 }
 
-/* Seta se movimenta no hover */
 .cloud-grid .cloud-item:hover .cloud-arrow {
     transform: translate(4px, -4px);
-    color: #00d9ff;
+    color: var(--orange);
 }
 
-/* Acessibilidade: foco pelo teclado */
 .cloud-grid .cloud-item:focus-visible {
-    outline: 2px solid #00d9ff;
+    outline: 2px solid var(--cyan);
     outline-offset: 4px;
 }
