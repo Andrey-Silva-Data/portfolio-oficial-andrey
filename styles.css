@@ -5,33 +5,31 @@
 
 /* AWS CLOUD PROJECTS - INTERACTIVE CARDS */
 
-/* AWS CLOUD PROJECTS - INTERACTIVE CARDS */
-
 .cloud-grid .cloud-item {
     display: grid;
     grid-template-columns: 40px 1fr 20px;
     gap: 15px;
     align-items: start;
-
-    color: inherit;
+    padding: 22px 18px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text);
     text-decoration: none;
     cursor: pointer;
-
-    transition: background .25s ease,
-                border-color .25s ease,
-                transform .25s ease,
-                box-shadow .25s ease;
+    position: relative;
+    z-index: 1;
+    transition: background 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease,
+                transform 0.25s ease;
 }
 
 .cloud-grid .cloud-item:hover {
-    background: rgba(53, 213, 232, 0.08);
+    background: rgba(53, 213, 232, 0.20);
     border-color: var(--cyan);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.cloud-grid .cloud-item h3 {
-    transition: color .25s ease;
+    box-shadow:
+        inset 0 0 25px rgba(53, 213, 232, 0.10),
+        0 0 18px rgba(53, 213, 232, 0.22);
+    transform: translateY(-4px);
 }
 
 .cloud-grid .cloud-item:hover h3 {
@@ -39,19 +37,17 @@
 }
 
 .cloud-grid .cloud-arrow {
-    color: var(--cyan);
+    color: var(--orange);
     opacity: 1;
     display: inline-block;
-    transition: transform .25s ease,
-                color .25s ease;
+    transition: transform 0.25s ease;
 }
 
 .cloud-grid .cloud-item:hover .cloud-arrow {
-    transform: translate(4px, -4px);
-    color: var(--orange);
+    transform: translate(5px, -5px);
 }
 
 .cloud-grid .cloud-item:focus-visible {
     outline: 2px solid var(--cyan);
-    outline-offset: 4px;
+    outline-offset: 3px;
 }
